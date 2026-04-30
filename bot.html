@@ -1,5 +1,51 @@
-<script src="https://cdn.rag.progress.cloud/nuclia-widget.umd.js"></script>
-<nuclia-search-bar
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Corticon Chat</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .chat-container {
+      width: 80%;
+      max-width: 800px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 24px;
+      color: #1c1e21;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 16px;
+      color: #606770;
+      margin-bottom: 24px;
+    }
+    nuclia-search-bar {
+      margin-bottom: 16px;
+    }
+  </style>
+  <script src="https://cdn.rag.progress.cloud/nuclia-widget.umd.js"></script>
+</head>
+<body>
+  <div class="chat-container">
+    <h1>Corticon Assistant</h1>
+    <p>
+      Ask me anything about Corticon and Corticon.js, past and present versions.
+      You can also filter by deployment choice or version.
+    </p>
+    <nuclia-search-bar
   audit_metadata='{"config":"base","widget":"verdictus"}'
   knowledgebox="4ef94733-62b1-4cf2-b65a-77f00d53db45"
   zone="aws-us-east-2-1"
@@ -17,4 +63,8 @@
   chat_placeholder="&quot;Ask about Corticon rules, deployment, or integration…|Follow up or ask a new question&quot;"
   not_enough_data_message="&quot;<p>I couldn't find a confident answer in the indexed Corticon documentation. Try narrowing by version or category using the filters, or <a href='https://docs.progress.com/category/corticon-information-hub'>browse the Information Hub</a> directly.</p>&quot;"
   feedback="none"></nuclia-search-bar>
-<nuclia-search-results ></nuclia-search-results>
+    <nuclia-search-results ></nuclia-search-results>
+  </div>
+</body>
+</html>
+[![Try the Searcher](https://img.shields.io/badge/Try_Searcher-Click_here-success?style=for-the-badge&logo=progress)](https://corticon.github.io/searcher/)
